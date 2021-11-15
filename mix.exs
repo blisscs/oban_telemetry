@@ -12,7 +12,6 @@ defmodule ObanTelemetry.MixProject do
     ]
   end
 
-
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
@@ -29,7 +28,8 @@ defmodule ObanTelemetry.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:oban, "~> 2.10"}
     ]
   end
 end

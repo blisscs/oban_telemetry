@@ -8,4 +8,8 @@ config :oban_telemetry, ObanTelemetry.Repo,
   database: "oban_telemetry_#{config_env()}",
   host_name: "localhost"
 
+config :oban_telemetry, Oban,
+  repo: ObanTelemetry.Repo,
+  queues: [default: 10]
+
 import_config "#{config_env()}.exs"
