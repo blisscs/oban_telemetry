@@ -1,8 +1,7 @@
 defmodule ObanTelemetryTest do
-  use ExUnit.Case
-  doctest ObanTelemetry
+  use ObanTelemetry.Case
 
-  test "greets the world" do
-    assert ObanTelemetry.hello() == :world
+  test "dummy test" do
+    assert "1" == "1"
   end
 end
