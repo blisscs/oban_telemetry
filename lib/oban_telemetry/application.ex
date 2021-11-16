@@ -6,7 +6,8 @@ defmodule ObanTelemetry.Application do
   def start(_type, _args) do
     children = [
       ObanTelemetry.Repo,
-      {Oban, oban_config()}
+      {Oban, oban_config()},
+      ObanTelemetry.Global
     ]
 
     opts = [strategy: :one_for_one, name: ObanTelemetry.Application]
